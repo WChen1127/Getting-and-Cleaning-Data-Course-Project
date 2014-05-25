@@ -58,42 +58,52 @@ Merge the training and test sets into one data set -- MergeData.
 Search for feature names with characters of "mean" or "std" but without "Freq" in the data file features.txt.
 
     head(features)
-names(MergeData)
-meanIndex <- which(grepl("mean", features$V2, perl=TRUE) == TRUE)
-meanIndex
-# exclude "meanFreq()"
-Index_exclude <- which(grepl("Freq", features$V2, perl=TRUE) == TRUE)
-Index_exclude
-meanIndex <- meanIndex[-which(meanIndex %in% Index_exclude)]
-meanIndex
-stdIndex <- which(grepl("std", features$V2, perl=TRUE) == TRUE)
-stdIndex
+    names(MergeData)
+    meanIndex <- which(grepl("mean", features$V2, perl=TRUE) == TRUE)
+    meanIndex
+Remember to remove "Freq".
 
+    exclude "meanFreq()"
+    Index_exclude <- which(grepl("Freq", features$V2, perl=TRUE) == TRUE)
+    Index_exclude
+meanIndex stores the index of features with "mean" in their names. Of course, without "Freqmean".
 
-ExtractData <- MergeData[, c(meanIndex, stdIndex, 562:563)]
-head(ExtractData)
-dim(ExtractData)
+    meanIndex <- meanIndex[-which(meanIndex %in% Index_exclude)]
+    meanIndex
+stdIndex stores the index of features with "std" in their names.
+
+    stdIndex <- which(grepl("std", features$V2, perl=TRUE) == TRUE)
+    stdIndex
+
+Now, we're almost there! ExtractData stores only the measurements on the mean and standard deviation for each measurement. 
+
+    ExtractData <- MergeData[, c(meanIndex, stdIndex, 562:563)]
+    head(ExtractData)
+    dim(ExtractData)
 
 
 ###3.uses descriptive activity names to name the activities in the data set
+Now, I'd like to deal with the features' names. Firstly, I refine the feature names by removing punctuation and transforming to lower case.
 
-head(features)
-# refine feature names: remove punctuation and lower case
-features$V2 <- gsub("[[:punct:]]", "", features$V2) 
-features$V2 <- tolower(features$V2)
+    features$V2 <- gsub("[[:punct:]]", "", features$V2) 
+    features$V2 <- tolower(features$V2)
+Notice, I only need the features' names in ExtractData, i.e. sth about "mean" or "std". Search for the descriptive names in the data set "features" and return them to ExtractData.
 
-names(ExtractData)
-features_index <- as.numeric(gsub("V", "", names(ExtractData[,1:66])))
-features_index
-write.table(features_index, "features_index.txt")
-names(ExtractData)[1:66] <- features$V2[features_index]
-names(ExtractData)[67] <- "activity"
-head(ExtractData)
+    names(ExtractData)
+    features_index <- as.numeric(gsub("V", "", names(ExtractData[,1:66])))
+    features_index
+    write.table(features_index, "features_index.txt")
+    names(ExtractData)[1:66] <- features$V2[features_index]
+Remember to rename the "y" feature with a descriptive name "activity".
+
+    names(ExtractData)[67] <- "activity"
+    head(ExtractData)
 
 
 ### 4.appropriately labels the data set with descriptive activity names.
-# a function to map a label into its activity name 
-activity_name_func <- function(label){
+I write a function to map a label into its activity name.
+
+    activity_name_func <- function(label){
     activity <- as.character(activity_labels$V2)
     name <- ifelse(label == 1, activity[1],
                    ifelse(label == 2, activity[2],
@@ -101,28 +111,32 @@ activity_name_func <- function(label){
                                  ifelse(label == 4, activity[4],
                                         ifelse(label == 5, activity[5], activity[6])))))
     return(name)
-  }
+    }
 
-ExtractData$activity <- sapply(ExtractData$activity, activity_name_func)
-ExtractData$activity <- sapply(ExtractData$activity, as.factor)
-names(ExtractData)
-head(ExtractData)
-dim(ExtractData)
+Now, all labels in the feature "activity" can be identifed by the descriptive names.
+
+    ExtractData$activity <- sapply(ExtractData$activity, activity_name_func)
+    ExtractData$activity <- sapply(ExtractData$activity, as.factor)
+    names(ExtractData)
+    head(ExtractData)
+    dim(ExtractData)
 
 setwd("/Users/wei/Desktop/SUMMER/cleaningdata")
 write.table(ExtractData, "ExtractData.txt")
 
 ### 5.creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-library(reshape2)
-names(ExtractData)
-MeltData <- melt(ExtractData, id=c("subject", "activity"),
+Melt and then cast the "ExtractData" data frame.
+
+    library(reshape2)
+    names(ExtractData)
+    MeltData <- melt(ExtractData, id=c("subject", "activity"),
                  measure.vars = names(ExtractData)[1:66]) 
-head(ExtractData)
-tail(ExtractData)
+    head(ExtractData)
+    tail(ExtractData)
+    TidyData <- dcast(MeltData, subject + activity ~ variable, mean)
+    head(TidyData)
+    dim(TidyData)
+Write down the finished data set "TidyData"
 
-TidyData <- dcast(MeltData, subject + activity ~ variable, mean)
-head(TidyData)
-dim(TidyData)
-
-setwd("/Users/wei/Desktop/SUMMER/cleaningdata")
-write.table(TidyData, "TidyData.txt")
+    setwd("/Users/wei/Desktop/SUMMER/cleaningdata")
+    write.table(TidyData, "TidyData.txt")
