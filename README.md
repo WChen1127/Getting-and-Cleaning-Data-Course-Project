@@ -25,7 +25,11 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ### import data
 Download the data file from the course website to the local computer 
-and read ".txt" data using     read.table()
+and read ".txt" data using     
+
+    read.table()
+
+
     getwd()
     setwd("./UCI HAR Dataset/")
     X_train <- read.table("./train/X_train.txt")
