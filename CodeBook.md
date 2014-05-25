@@ -3,7 +3,7 @@
 
 subject 2
 
-        the subject who performed the activity for each window sample. Its range is from 1 to 30.
+the subject who performed the activity for each window sample. Its range is from 1 to 30.
 
 
 activity 18
