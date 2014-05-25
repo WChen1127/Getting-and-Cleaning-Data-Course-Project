@@ -1,3 +1,9 @@
+# run_analysis()
+# read in separate data set. The function run_analysis() will creates a independent tidy data set with the average of 
+# each variable for each activity and each subject.
+
+run_analysis <- function(){
+
 ## import data
 getwd()
 setwd("./UCI HAR Dataset/")
@@ -95,7 +101,7 @@ dim(TidyData)
 setwd("/Users/wei/Desktop/SUMMER/cleaningdata")
 write.table(TidyData, "TidyData.txt")
 
-
+}
 
 
 
