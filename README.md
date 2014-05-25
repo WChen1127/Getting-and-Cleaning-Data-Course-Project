@@ -24,18 +24,21 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 ##Process
 
 ### import data
+Download the data file from the course website to the local computer 
+and read ".txt" data using     read.table()
     getwd()
     setwd("./UCI HAR Dataset/")
     X_train <- read.table("./train/X_train.txt")
     y_train <- read.table("./train/y_train.txt")
-subject_train <- read.table("./train/subject_train.txt")
-X_test <- read.table("./test/X_test.txt")
-y_test <- read.table("./test/y_test.txt")
-subject_test <- read.table("./test/subject_test.txt")
-activity_labels <- read.table("activity_labels.txt")
-features <- read.table("features.txt")
+    subject_train <- read.table("./train/subject_train.txt")
+    X_test <- read.table("./test/X_test.txt")
+    y_test <- read.table("./test/y_test.txt")
+    subject_test <- read.table("./test/subject_test.txt")
+    activity_labels <- read.table("activity_labels.txt")
+    features <- read.table("features.txt")
 
-## 1.merges the training and the test sets to create one data set.
+### 1.merges the training and the test sets to create one data set.
+
 TrainSet <- cbind(X_train, y_train, subject_train)
 TestSet <- cbind(X_test, y_test, subject_test)
 names(TrainSet)
