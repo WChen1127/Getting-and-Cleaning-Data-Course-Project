@@ -1,22 +1,19 @@
 ## DATA DICTIONARY
 ### Human Activity Recognition Using Smartphones Dataset
 
-subject 2
+    subject 2
 
 the subject who performed the activity for each window sample. Its range is from 1 to 30.
 
-
-activity 18
+    activity 18
 
 the activity that a subject performed six activities, including WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 
-
-tbodyaccmeanx 10 
+    tbodyaccmeanx 10 
 
 mean of the body accelerometer signals, in the X direction
 
-
-tbodyaccmeany 10 
+    tbodyaccmeany 10 
 
 mean of the body accelerometer signals, in the Y direction
 
