@@ -1,5 +1,5 @@
 ## DATA DICTIONARY
-### Human Activity Recognition Using Smartphones Dataset
+
 
     subject 2
 
@@ -17,197 +17,196 @@ mean of the body accelerometer signals, in the X direction
 
 mean of the body accelerometer signals, in the Y direction
 
-
-### tbodyaccmeanz 10 
+    tbodyaccmeanz 10 
 mean of the body accelerometer signals, in the Z direction
 
-### tgravityaccmeanx 10 
+    tgravityaccmeanx 10 
 mean of the gravity accelerometer signals, in the X direction
 
-### tgravityaccmeany 10 
+    tgravityaccmeany 10 
 mean of the gravity accelerometer signals, in the Y direction
 
-### tgravityaccmeanz 10 
+    tgravityaccmeanz 10 
 mean of the gravity accelerometer signals, in the Z direction
 
-### tbodyaccjerkmeanx 10 
+    tbodyaccjerkmeanx 10 
 mean of the body accelerometer signals (Jerk), in the X direction
 
-### tbodyaccjerkmeany 10 
+    tbodyaccjerkmeany 10 
 mean of the body accelerometer signals (Jerk), in the Y direction
 
-### tbodyaccjerkmeanz 10 
+    tbodyaccjerkmeanz 10 
 mean of the body accelerometer signals (Jerk), in the Z direction
 
-### tbodygyromeanx 10 
+    tbodygyromeanx 10 
 mean of the body gyroscope signals, in the X direction
 
-### tbodygyromeany 10 
+    tbodygyromeany 10 
 mean of the body gyroscope signals, in the Y direction
 
-### tbodygyromeanz 10 
+    tbodygyromeanz 10 
 mean of the body gyroscope signals, in the Z direction
 
-### tbodygyrojerkmeanx 10 
+    tbodygyrojerkmeanx 10 
 mean of the body gyroscope signals (Jerk), in the X direction
 
-### tbodygyrojerkmeany 10 
+    tbodygyrojerkmeany 10 
 mean of the body gyroscope signals (Jerk), in the Y direction
 
-### tbodygyrojerkmeanz 10 
+    tbodygyrojerkmeanz 10 
 mean of the body gyroscope signals (Jerk), in the Z direction
 
-### tbodyaccmagmean 10 
+    tbodyaccmagmean 10 
 mean of the body accelerometer signals (calculated using the Euclidean norm) 
 
-### tgravityaccmagmean 10 
+    tgravityaccmagmean 10 
 mean of the gravity accelerometer signals (calculated using the Euclidean norm)
 
-### tbodyaccjerkmagmean 10 
+    tbodyaccjerkmagmean 10 
 mean of the body accelerometer signals (Jerk) (calculated using the Euclidean norm) 
 
-### tbodygyromagmean 10 
+    tbodygyromagmean 10 
 mean of the body gyroscope signals (calculated using the Euclidean norm)
 
-### tbodygyrojerkmagmean 10 
+    tbodygyrojerkmagmean 10 
 mean of the body gyroscope signals (Jerk) (calculated using the Euclidean norm)
 
-### fbodyaccmeanx 10 
+    fbodyaccmeanx 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals, in the X direction
 
-### fbodyaccmeany 10 
+    fbodyaccmeany 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals, in the Y direction
 
-### fbodyaccmeanz 10 
+    fbodyaccmeanz 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals, in the Z direction
 
-### fbodyaccjerkmeanx 10 
+    fbodyaccjerkmeanx 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals (Jerk), in the X direction 
 
-### fbodyaccjerkmeany 10 
+    fbodyaccjerkmeany 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals (Jerk), in the Y direction
 
-### fbodyaccjerkmeanz 10 
+    fbodyaccjerkmeanz 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals (Jerk), in the Z direction
 
-### fbodygyromeanx 10 
+    fbodygyromeanx 10 
 mean of the applied FFT(a Fast Fourier Transform) body gyroscope signals, in the X direction
 
-### fbodygyromeany 10 
+    fbodygyromeany 10 
 mean of the applied FFT(a Fast Fourier Transform) body gyroscope signals, in the Y direction
 
-### fbodygyromeanz 10 
+    fbodygyromeanz 10 
 mean of the applied FFT(a Fast Fourier Transform) body gyroscope signals, in the Z direction
 
-### fbodyaccmagmean 10 
+    fbodyaccmagmean 10 
 mean of the applied FFT(a Fast Fourier Transform) body accelerometer signals (calculated using the Euclidean norm)
 
-### fbodybodyaccjerkmagmean 10 
+    fbodybodyaccjerkmagmean 10 
 mean of the applied FFT(a Fast Fourier Transform) body Bodyaccelerometer signals (Jerk) (calculated using the Euclidean norm) 
 
-### fbodybodygyromagmean 10 
+    fbodybodygyromagmean 10 
 mean of the applied FFT(a Fast Fourier Transform) body Bodygyroscope signals (calculated using the Euclidean norm)
 
-### fbodybodygyrojerkmagmean 10 
+    fbodybodygyrojerkmagmean 10 
 mean of the applied FFT(a Fast Fourier Transform) body Bodygyroscope signals (Jerk) (calculated using the Euclidean norm)
 
-### tbodyaccstdx 10 
+    tbodyaccstdx 10 
 standard deviation of the body accelerometer signals, in the X direction
 
-### tbodyaccstdy 10 
+    tbodyaccstdy 10 
 standard deviation of the body accelerometer signals, in the Y direction
 
-### tbodyaccstdz 10 
+    tbodyaccstdz 10 
 standard deviation of the body accelerometer signals, in the Z direction
 
-### tgravityaccstdx 10 
+    tgravityaccstdx 10 
 standard deviation of the gravity accelerometer signals, in the X direction
 
-### tgravityaccstdy 10 
+    tgravityaccstdy 10 
 standard deviation of the gravity accelerometer signals, in the Y direction
 
-### tgravityaccstdz 10 
+    tgravityaccstdz 10 
 standard deviation of the gravity accelerometer signals, in the Z direction
 
-### tbodyaccjerkstdx 10 
+    tbodyaccjerkstdx 10 
 standard deviation of the body accelerometer signals (Jerk), in the X direction
 
-### tbodyaccjerkstdy 10 
+    tbodyaccjerkstdy 10 
 standard deviation of the body accelerometer signals (Jerk), in the Y direction
 
-### tbodyaccjerkstdz 10 
+    tbodyaccjerkstdz 10 
 standard deviation of the body accelerometer signals (Jerk), in the Z direction
 
-### tbodygyrostdx 10 
+    tbodygyrostdx 10 
 standard deviation of the body gyroscope signals, in the X direction
 
-### tbodygyrostdy 10 
+    tbodygyrostdy 10 
 standard deviation of the body gyroscope signals, in the Y direction
 
-### tbodygyrostdz 10 
+    tbodygyrostdz 10 
 standard deviation of the body gyroscope signals, in the Z direction
 
-### tbodygyrojerkstdx 10
+    tbodygyrojerkstdx 10
 standard deviation of the body gyroscope signals (Jerk), in the X direction
 
-### tbodygyrojerkstdy 10 
+    tbodygyrojerkstdy 10 
 standard deviation of the body gyroscope signals (Jerk), in the Y direction
 
-### tbodygyrojerkstdz 10 
+    tbodygyrojerkstdz 10 
 standard deviation of the body gyroscope signals (Jerk), in the Z direction
 
-### tbodyaccmagstd 10 
+    tbodyaccmagstd 10 
 standard deviation of the body accelerometer signals (calculated using the Euclidean norm) 
 
-### tgravityaccmagstd 10 
+    tgravityaccmagstd 10 
 standard deviation of the gravity accelerometer signals (calculated using the Euclidean norm) 
 
-### tbodyaccjerkmagstd 10 
+    tbodyaccjerkmagstd 10 
 standard deviation of the body accelerometer signals (Jerk) (calculated using the Euclidean norm) 
 
-### tbodygyromagstd 10 
+    tbodygyromagstd 10 
 standard deviation of the body gyroscope signals (calculated using the Euclidean norm) 
 
-### tbodygyrojerkmagstd 10 
+    tbodygyrojerkmagstd 10 
 standard deviation of the body gyroscope signals (Jerk) (calculated using the Euclidean norm) 
 
-### fbodyaccstdx 10 
+    fbodyaccstdx 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals, in the X direction
 
-### fbodyaccstdy 10 
+    fbodyaccstdy 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals, in the Y direction
 
-### fbodyaccstdz 10 
+    fbodyaccstdz 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals, in the Z direction
 
-### fbodyaccjerkstdx 10 
+    fbodyaccjerkstdx 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals (Jerk), in the X direction
 
-### fbodyaccjerkstdy 10 
+    fbodyaccjerkstdy 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals (Jerk), in the Y direction
 
-### fbodyaccjerkstdz 10 
+    fbodyaccjerkstdz 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals (Jerk), in the Z direction
 
-### fbodygyrostdx 10 
+    fbodygyrostdx 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body gyroscope signals, in the X direction
 
-### fbodygyrostdy 10 
+    fbodygyrostdy 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body gyroscope signals, in the Y direction
 
-### fbodygyrostdz 10 
+    fbodygyrostdz 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body gyroscope signals, in the Z direction
 
-### fbodyaccmagstd 10 
+    fbodyaccmagstd 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body accelerometer signals (calculated using the Euclidean norm)
 
-### fbodybodyaccjerkmagstd 10 
+    fbodybodyaccjerkmagstd 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body Bodyaccelerometer signals (Jerk) (calculated using the Euclidean norm) 
 
-### fbodybodygyromagstd 10 
+    fbodybodygyromagstd 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body Bodygyroscope signals (calculated using the Euclidean norm)
 
-### fbodybodygyrojerkmagstd 10 
+    fbodybodygyrojerkmagstd 10 
 standard deviation of the applied FFT(a Fast Fourier Transform) body Bodygyroscope signals (Jerk) (calculated using the Euclidean norm)
 
 
