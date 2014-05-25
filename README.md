@@ -54,9 +54,10 @@ Merge the training and test sets into one data set -- MergeData.
     MergeData <- merge(TrainSet, TestSet, all=TRUE)
 
 
-###2.extracts only the measurements on the mean and standard 
-###deviation for each measurement. 
-head(features)
+###2.extracts only the measurements on the mean and standard deviation for each measurement. 
+Search for feature names with characters of "mean" or "std" but without "Freq" in the data file features.txt.
+
+    head(features)
 names(MergeData)
 meanIndex <- which(grepl("mean", features$V2, perl=TRUE) == TRUE)
 meanIndex
@@ -74,8 +75,8 @@ head(ExtractData)
 dim(ExtractData)
 
 
-## 3.uses descriptive activity names to name the activities in
-## the data set
+###3.uses descriptive activity names to name the activities in the data set
+
 head(features)
 # refine feature names: remove punctuation and lower case
 features$V2 <- gsub("[[:punct:]]", "", features$V2) 
@@ -90,8 +91,7 @@ names(ExtractData)[67] <- "activity"
 head(ExtractData)
 
 
-## 4.appropriately labels the data set with descriptive activity
-## names.
+### 4.appropriately labels the data set with descriptive activity names.
 # a function to map a label into its activity name 
 activity_name_func <- function(label){
     activity <- as.character(activity_labels$V2)
@@ -112,8 +112,7 @@ dim(ExtractData)
 setwd("/Users/wei/Desktop/SUMMER/cleaningdata")
 write.table(ExtractData, "ExtractData.txt")
 
-## 5.creates a second, independent tidy data set with the average of 
-## each variable for each activity and each subject. 
+### 5.creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 library(reshape2)
 names(ExtractData)
 MeltData <- melt(ExtractData, id=c("subject", "activity"),
