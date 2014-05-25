@@ -1,7 +1,7 @@
 ## DATA DICTIONARY
 ### Human Activity Recognition Using Smartphones Dataset
 
-* subject 2
+subject 2
 the subject who performed the activity for each window sample. Its range is from 1 to 30.
 
 ### activity 18
