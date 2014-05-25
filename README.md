@@ -25,10 +25,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ### import data
 Download the data file from the course website to the local computer 
-and read ".txt" data using     
-
-    read.table()
-
+and read ".txt" data using read.table().
 
     getwd()
     setwd("./UCI HAR Dataset/")
@@ -42,19 +39,23 @@ and read ".txt" data using
     features <- read.table("features.txt")
 
 ### 1.merges the training and the test sets to create one data set.
+Combine all columns of the training/test data into TrainSet and rename 
+key features. 
 
-TrainSet <- cbind(X_train, y_train, subject_train)
-TestSet <- cbind(X_test, y_test, subject_test)
-names(TrainSet)
-names(TestSet)
-names(TrainSet)[562] <- "y"; names(TestSet)[562] <- "y"
-names(TrainSet)[563] <- "subject"; names(TestSet)[563] <- "subject"
+    TrainSet <- cbind(X_train, y_train, subject_train)
+    TestSet <- cbind(X_test, y_test, subject_test)
+    names(TrainSet)
+    names(TestSet)
+    names(TrainSet)[562] <- "y"; names(TestSet)[562] <- "y"
+    names(TrainSet)[563] <- "subject"; names(TestSet)[563] <- "subject"
 
-MergeData <- merge(TrainSet, TestSet, all=TRUE)
+Merge the training and test sets into one data set -- MergeData.
+
+    MergeData <- merge(TrainSet, TestSet, all=TRUE)
 
 
-## 2.extracts only the measurements on the mean and standard 
-## deviation for each measurement. 
+###2.extracts only the measurements on the mean and standard 
+###deviation for each measurement. 
 head(features)
 names(MergeData)
 meanIndex <- which(grepl("mean", features$V2, perl=TRUE) == TRUE)
